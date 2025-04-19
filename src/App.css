@@ -5,3 +5,13 @@
 body{
     font-family: 'sora',system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.footer h3{
+    color:#fff ;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.footer a, .footer p{
+    font-size: 15px;
+}
