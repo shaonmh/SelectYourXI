@@ -33,7 +33,7 @@ function App() {
       <div className="absolute bg-black inset-0" style={{ backgroundColor: 'black' }}>
           <div className='absolute inset-0 bg-cover bg-center ' style={{ backgroundImage: "url('/src/assets/bg-shadow.png')" }}>
             <div className=" flex flex-col justify-center items-center">
-              <img className='w-55 mt-15' src="/src/assets/banner-main.png" alt="" />
+              <img className='w-55 mt-15' src="/src/assets/banner-main.png" alt="banner" />
               <h1 className="text-4xl text-white font-bold my-4">Assemble Your Ultimate Dream 11 Cricket Team</h1>
               <h3 className='text-2xl font-medium text-gray-400'>Beyond Boundaries Beyond Limits</h3>
               <div className=" mt-4 relative inline-block  p-2 hover:p-0 hover:border-0 hover:mt-6  transition-all border-2 border-lime-500 rounded-2xl">
@@ -121,7 +121,7 @@ function App() {
             <h3>Subscribe</h3>
             <p>Subscribe to our newsletter for the latest updates.</p>
             <div className="sub flex items-center my-5">
-              <input type="text" className='h-10 appearance-none leading-2.5 bg-amber-50 rounded-r-none rounded-xl w-2/3 text-xs  px-4  py-2  text-gray-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Enter your email'/>
+              <input type="text" className='h-10 appearance-none leading-2.5 bg-amber-50 rounded-r-none rounded-xl w-2/3 text-xs  px-4  py-2  text-gray-700 focus:outline-none focus:shadow-outline' placeholder='Enter your email'/>
               <a href="#" className=' text-gray-950 leading-6 text-center  w-1/3 bg-slate-300 px-3 py-2 font-bold rounded-l-none rounded-xl h-10 bg-linear-65 from-pink-300 to-yellow-400'>Subscribe</a>
             
             </div>
