@@ -91,7 +91,7 @@ function App() {
         <h2 className='text-3xl  my-5 font-bold'>Subscribe to our Newsletter</h2>
         <h3 className='text-lg font-semibold text-gray-500'>Get the latest updates and news right in your inbox!</h3>
         <div className="sub flex items-center w-1/2 gap-3 py-5 justify-around ">
-          <input type="text" className='h-14 appearance-none border border-slate-300 rounded-xl w-full px-10  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Enter your email'/>
+          <input type="text" className='h-14 appearance-none border border-slate-300 rounded-xl w-full px-10  py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Enter your email'/>
           <a href="#" className=' border-1 border-slate-300 bg-slate-300 px-6 py-4 font-bold rounded-xl h-14 bg-linear-65 from-pink-300 to-yellow-400'>Subscribe</a>
         </div>
       </div>
