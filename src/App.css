@@ -12,6 +12,10 @@ body{
     font-size: 18px;
 }
 
+.footer .news-letter-container h3{
+    color: #888;
+}
+
 .footer a, .footer p{
     font-size: 15px;
 }
