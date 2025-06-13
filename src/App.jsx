@@ -86,8 +86,8 @@ function App() {
 
         </div>
       </div>
-
-      <div className="news-letter-container  w-5/6 rounded-3xl flex flex-col mx-auto text-center items-center p-20 inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/src/assets/bg-shadow.png')" }}>
+      <div className="relative">
+      <div className="news-letter-container absolute mt-3/4 bottom-3/4 top-[-250px]  w-5/6 rounded-3xl flex flex-col mx-auto text-center items-center p-20 inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/src/assets/bg-shadow.png')" }}>
         <h2 className='text-3xl  my-5 font-bold'>Subscribe to our Newsletter</h2>
         <h3 className='text-lg font-semibold text-gray-500'>Get the latest updates and news right in your inbox!</h3>
         <div className="sub flex items-center w-1/2 gap-3 py-5 justify-around ">
@@ -109,8 +109,6 @@ function App() {
             <h3>Quick Links</h3>
             <ul className='list-disc pl-7 flex flex-col gap-3'>
               <li><a href="#">Home</a></li>
-
-
               <li><a href="#">Services</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">About</a></li>
@@ -131,6 +129,7 @@ function App() {
           <hr />
           <p className=' py-10'>&copy;2024 Your Company All Rights Reserved.</p>
         </div>
+      </div>
       </div>
     </>
   )
