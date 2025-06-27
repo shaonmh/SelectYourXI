@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import './App.css'
 import { BsCoin, BsFlagFill } from "react-icons/bs";
-import SinglePlayer from './singlePlayer';
+import SinglePlayer from './SinglePlayer';
 import Coin from './Coin';
 
 
