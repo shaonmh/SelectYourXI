@@ -1,7 +1,9 @@
 
-import { useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 import './App.css'
 import { BsCoin, BsFlagFill } from "react-icons/bs";
+import { MdDeleteForever } from "react-icons/md";
+
 import SinglePlayer from './SinglePlayer';
 import Coin from './Coin';
 
@@ -13,6 +15,8 @@ function App() {
   const [players, setPlayers] = useState([])
   
   const [coins, setCoins] = useState(0)
+
+
   useEffect(()=>{
     fetch("/player.json")
     .then(res => res.json())
@@ -21,11 +25,51 @@ function App() {
       
     })
   },[])
-  console.log(players);
   
 
-  // const [count, setCount] = useState(0)
+  const [select, setSelect] = useState([])
+  const [activeTab, setActiveTab] = useState('available')
 
+  const handleSelectedPlayer = (pl) => {
+   const isExist = select.find(player =>  player.playerId == pl.playerId)
+
+   console.log(isExist);
+    if(isExist){
+      alert('The Player already Exists')
+    }else{
+    setSelect([...select, pl])
+  }
+
+
+  }
+   
+  const handleTabChange = btn => {
+    setActiveTab(btn)
+  }
+  // const handleDipslaySelected = () => {
+    
+  // }
+
+  const playerToShow = 
+  activeTab === 'available' ? players : select;
+
+  
+  const availableText =  'Available Players';
+  const selectText = `Selected Players  (${select.length})` ;
+
+
+  const tabText =
+  activeTab === 'available' ? availableText : selectText;
+
+  
+
+const handleDeletePlayer = (pl) => {
+
+  const newSelect = select.filter(player => player.playerId != pl)
+  setSelect(newSelect)
+}
+
+// console.log(select);
   return (
     <>
       <div className="w-5/6 mx-auto flex justify-between items-center h-[100px]">
@@ -52,18 +96,40 @@ function App() {
       <Coin setCoins={setCoins}></Coin>
       <div className="available w-5/6 mx-auto flex justify-between mt-15">
 
-        <h3 className='text-3xl font-bold'>Available Players</h3>
+        <h3 className='text-3xl font-bold'> {tabText} </h3>
         <div className="select">
-          <button className="rounded-r-none rounded-lg border-gray-300 border-2 hover:bg-lime-300 active:font-bold">Available</button>
-          <button className="rounded-l-none border-l-0 rounded-lg border-gray-300 border-2 hover:bg-lime-300 active:font-bold">Selected</button>
+          <button onClick={() => handleTabChange('available')}  className="rounded-r-none rounded-lg border-gray-300 border-2 hover:bg-lime-300 active:font-bold">Available</button>
+          <button onClick={() => handleTabChange('selected')}  className="rounded-l-none border-l-0 rounded-lg border-gray-300 border-2 hover:bg-lime-300 active:font-bold">Selected ({select.length})</button>
         </div>
 
       </div>
-      <div className="profile-container flex flex-wrap gap-4 w-5/6 mx-auto mt-20 mb-30 pb-80">
+      <div className='flex profile-container w-5/6 mx-auto mt-20 mb-30 pb-80' >
+        
+
         {
+          
+          // playerToShow.map(player => (<SinglePlayer handleSelectedPlayer={handleSelectedPlayer} key={player.playerId} player={player}></SinglePlayer>))
         
-          players.map(player => (<SinglePlayer player={player}></SinglePlayer>))
-        
+          activeTab === 'available' ? (
+           <div className=" flex flex-wrap gap-4 ">{playerToShow.map(player => (<SinglePlayer handleSelectedPlayer={handleSelectedPlayer} key={player.playerId} player={player}></SinglePlayer>))}
+          </div>) : (
+            <ul className='w-full flex flex-col gap-5 '>
+              {playerToShow.map(player => (
+
+                <div className="flex border border-gray-50 rounded-lg items-center justify-between p-5">
+                  <div className='flex gap-4 items-center'>
+                    <div className='profile-img'><img src={player.image} alt="" /></div>
+                  <li className='items-center'> 
+                    {player.name}
+                    <p className='text-sm'>{player.role}</p>
+                  </li>
+                  </div>
+
+                  <MdDeleteForever onClick={() => handleDeletePlayer(player.playerId)} className='text-2xl cursor-pointer text-red-500'/>
+                </div>
+              ))}
+            </ul>
+          )
         }
       
       </div>

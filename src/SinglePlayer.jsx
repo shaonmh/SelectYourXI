@@ -1,8 +1,8 @@
 import React from 'react';
-import { BsFlagFill } from "react-icons/bs";
+import { BsFlagFill} from "react-icons/bs";
 
 
-const SinglePlayer = ({player}) => {
+const SinglePlayer = ({player, handleSelectedPlayer}) => {
     return (
         <div className="flex-[1_1_30%] min-w-[300px] profile p-4 rounded-2xl border-2 border-gray-200 justify-center items-center flex-col">
           <img className='w-full h-72 object-cover rounded-2xl'  src={player.image} alt="player" />
@@ -26,7 +26,7 @@ const SinglePlayer = ({player}) => {
             <div className="rating flex-col">
               <h3 className='text-md font-bold my-3'>Rating</h3>
               <div className=" flex items-center my-3 justify-between"><h4 className='font-semibold'>{player.battingType}</h4><p>{player.bowlingType}</p></div>
-              <div className=" flex items-center justify-between"><h4 className='font-semibold'>Price: ${player.biddingPrice}</h4><a className='btn px-3 py-2 border-1 border-slate-300 rounded-lg text-sm text-slate-500'>Choose Player</a></div>
+              <div className=" flex items-center justify-between"><h4 className='font-semibold'>Price: ${player.biddingPrice}</h4><a onClick={() => handleSelectedPlayer(player)} className='btn px-3 py-2 border-1 border-slate-300 rounded-lg text-sm text-slate-500'>Choose Player</a></div>
             </div>
           </div>
 
