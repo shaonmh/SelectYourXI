@@ -33,12 +33,30 @@ function App() {
   const handleSelectedPlayer = (pl) => {
    const isExist = select.find(player =>  player.playerId == pl.playerId)
 
-   console.log(isExist);
+   console.log(pl.biddingPrice);
     if(isExist){
       alert('The Player already Exists')
     }else{
-    setSelect([...select, pl])
+
+      if(select.length > 5){
+        alert('You can not add  more than 6 players')
+      }else{
+
+        setSelect([...select, pl])
+        
+        if(coins < pl.biddingPrice){
+          alert('Not enough Money To buy this player')
+        }else{
+          
+        setCoins(coins - pl.biddingPrice)
+        }
+      }
+
   }
+
+    
+
+
 
 
   }
@@ -55,7 +73,7 @@ function App() {
 
   
   const availableText =  'Available Players';
-  const selectText = `Selected Players  (${select.length})` ;
+  const selectText = `Selected Players  (${select.length} /6)` ;
 
 
   const tabText =
@@ -66,8 +84,10 @@ function App() {
 const handleDeletePlayer = (pl) => {
 
   const newSelect = select.filter(player => player.playerId != pl)
-  setSelect(newSelect)
+  setSelect(newSelect )
 }
+
+
 
 // console.log(select);
   return (
