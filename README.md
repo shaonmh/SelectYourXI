@@ -1,12 +1,30 @@
-# React + Vite
+# React Player Selection App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that displays two categories of football players — available and selected. Users can switch between views and see players displayed in different formats based on the selected tab.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React.js (with Hooks)
+- JavaScript (ES6+)
+- HTML/CSS (external stylesheet)
+- Vite (or Create React App, depending on your setup)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 3 Key Features
+
+1. **Tab-based View Switching**  
+   Users can toggle between "Available" and "Selected" players using interactive buttons.
+
+2. **Dynamic Rendering**  
+   Player lists are conditionally rendered depending on the active tab — displayed as cards for "Available" and as a list for "Selected".
+
+3. **Modular & Scalable Code**  
+   Clean separation of logic and styles makes it easy to scale the app with more player data or UI enhancements.
+
+---
+
+##  Project Structure
+

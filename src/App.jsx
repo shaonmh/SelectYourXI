@@ -3,7 +3,7 @@ import {  useEffect, useState } from 'react';
 import './App.css'
 import { BsCoin, BsFlagFill } from "react-icons/bs";
 import { MdDeleteForever } from "react-icons/md";
-
+import { ToastContainer, toast } from 'react-toastify';
 import SinglePlayer from './SinglePlayer';
 import Coin from './Coin';
 
@@ -35,20 +35,22 @@ function App() {
 
    console.log(pl.biddingPrice);
     if(isExist){
-      alert('The Player already Exists')
+      toast('The Player already Exists')
+      
     }else{
 
       if(select.length > 5){
-        alert('You can not add  more than 6 players')
+        toast('You can not add  more than 6 players')
       }else{
 
-        setSelect([...select, pl])
         
         if(coins < pl.biddingPrice){
-          alert('Not enough Money To buy this player')
+          toast('Not enough Money To buy this player')
         }else{
           
         setCoins(coins - pl.biddingPrice)
+        
+        setSelect([...select, pl])
         }
       }
 
@@ -82,8 +84,12 @@ function App() {
   
 
 const handleDeletePlayer = (pl) => {
+  
 
   const newSelect = select.filter(player => player.playerId != pl)
+  
+  
+  
   setSelect(newSelect )
 }
 
@@ -118,8 +124,12 @@ const handleDeletePlayer = (pl) => {
 
         <h3 className='text-3xl font-bold'> {tabText} </h3>
         <div className="select">
-          <button onClick={() => handleTabChange('available')}  className="rounded-r-none rounded-lg border-gray-300 border-2 hover:bg-lime-300 active:font-bold">Available</button>
-          <button onClick={() => handleTabChange('selected')}  className="rounded-l-none border-l-0 rounded-lg border-gray-300 border-2 hover:bg-lime-300 active:font-bold">Selected ({select.length})</button>
+          <button onClick={() => handleTabChange('available')}  className={`rounded-r-none rounded-lg border-gray-300 border-2 hover:bg-lime-300 focus:border-transparent focus:ring-0   ${
+            activeTab === 'available' ? 'bg-lime-300 text-gray-800' : 'bg-white'
+          }`}>Available</button>
+          <button onClick={() => handleTabChange('selected')}  className={`rounded-l-none rounded-lg border-gray-300 border-2 hover:bg-lime-300 focus:border-transparent focus:ring-0  ${
+            activeTab === 'selected' ? 'bg-lime-300 text-gray-800' : 'bg-white'
+          }`}>Selected ({select.length})</button>
         </div>
 
       </div>
@@ -131,6 +141,7 @@ const handleDeletePlayer = (pl) => {
           // playerToShow.map(player => (<SinglePlayer handleSelectedPlayer={handleSelectedPlayer} key={player.playerId} player={player}></SinglePlayer>))
         
           activeTab === 'available' ? (
+            
            <div className=" flex flex-wrap gap-4 ">{playerToShow.map(player => (<SinglePlayer handleSelectedPlayer={handleSelectedPlayer} key={player.playerId} player={player}></SinglePlayer>))}
           </div>) : (
             <ul className='w-full flex flex-col gap-5 '>
@@ -146,9 +157,14 @@ const handleDeletePlayer = (pl) => {
                   </div>
 
                   <MdDeleteForever onClick={() => handleDeletePlayer(player.playerId)} className='text-2xl cursor-pointer text-red-500'/>
+                    
                 </div>
+                
               ))}
+              <button className='bg-orange-200 w-50 px-4 py-3 rounded-xl' onClick={() => handleTabChange('available')} >Add more player</button>
             </ul>
+
+            
           )
         }
       

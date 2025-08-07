@@ -1,5 +1,7 @@
 import React from 'react';
 import { BsFlagFill} from "react-icons/bs";
+import { ToastContainer } from 'react-toastify';
+
 
 
 const SinglePlayer = ({player, handleSelectedPlayer}) => {
@@ -32,7 +34,7 @@ const SinglePlayer = ({player, handleSelectedPlayer}) => {
 
           
 
-
+        <ToastContainer/>
         </div>
     );
 };
