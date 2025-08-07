@@ -26,5 +26,4 @@ A simple React application that displays two categories of football players — 
 
 ---
 
-##  Project Structure
 
