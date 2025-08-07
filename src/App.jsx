@@ -100,7 +100,7 @@ const handleDeletePlayer = (pl) => {
     <>
       <div className="w-5/6 mx-auto flex justify-between items-center h-[100px]">
         <div className="logo">
-          <img src="src/assets/logo.png" alt="logo" className="h-[60px] w-auto" />
+          <img src="/assets/logo.png" alt="logo" className="h-[60px] w-auto" />
         </div>
         <div className="navbar h-150px ">
           <ul className='flex gap-8 items-center capitalize text-gray-500 justify-items-stretch'>
@@ -171,7 +171,7 @@ const handleDeletePlayer = (pl) => {
       </div>
       <div className="footer p-20 flex flex-col items-center text-gray-500 relative   bg-slate-950 mx-auto  ">
       <div className="bg-white -top-[25%] h-100 w-5/6 mx-auto px-10 rounded-3xl absolute text-center items-center p-0 ">
-        <div className="news-letter-container items-center pb-30  rounded-3xl flex flex-col z-9  inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/src/assets/bg-shadow.png')" }}>
+        <div className="news-letter-container items-center pb-30  rounded-3xl flex flex-col z-9  inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/assets/bg-shadow.png')" }}>
           <h2 className='text-3xl  mt-10 font-bold'>Subscribe to our Newsletter</h2>
           <h3 className='text-lg font-semibold text-gray-900'>Get the latest updates and news right in your inbox!</h3>
           <div className="sub flex items-center w-1/2 gap-3 py-5 justify-around ">
@@ -183,7 +183,7 @@ const handleDeletePlayer = (pl) => {
 
       
         <div className="logo my-20 pt-30 flex justify-center">
-          <img src="/src/assets/logo-footer.png" alt="logo footer" />
+          <img src="/assets/logo-footer.png" alt="logo footer" />
         </div>
         <div className="footer-content grid grid-cols-3 gap-20 my-30">
           <div className="about-us">
