@@ -19,13 +19,13 @@ const Coin = ({ setCoins }) => {
               src="/assets/banner-main.png"
               alt="banner"
             />
-            <h1 className="text-4xl text-white font-bold my-4 text-center">
+            <h1 className="text-2xl md:text-4xl text-white font-bold my-4 text-center">
               Assemble Your Ultimate Dream 11 Cricket Team
             </h1>
-            <h3 className="text-2xl font-medium text-gray-400">
+            <h3 className="text-lg md:text-2xl font-medium text-gray-400">
               Beyond Boundaries Beyond Limits
             </h3>
-            <div className=" mt-4 relative inline-block  p-2 hover:p-0 hover:border-0 hover:mt-6  transition-all border-2 border-lime-500 rounded-2xl">
+            <div className=" mt-4 relative inline-block  p-2 md:hover:p-0 md:hover:border-0 md:hover:mt-6  transition-all border-2 border-lime-500 rounded-2xl">
               <button
                 onClick={addCoins}
                 className="btn bg-lime-300 outline-lime-300 font-extrabold rounded-lg "
