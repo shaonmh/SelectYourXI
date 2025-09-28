@@ -8,7 +8,7 @@ const Navbar = ({ coins }) => {
   const navItems = ["Home", "Fixture", "Teams", "Schedules"];
   return (
     <div>
-      <nav className=" mx-auto  w-full z-50 fixed left-0 top-0 bg-white  mb-15 shadow-md">
+      <nav className=" mx-auto right-0  h-[80px]  w-full fixed left-0 mb-15 top-0 inset-x-0 z-2020 bg-white/90 backdrop-blur-md shadow-md">
         <div className="w-5/6 mx-auto">
           <div className=" flex justify-between items-center h-[80px]">
             {/* logo */}
@@ -68,7 +68,7 @@ const Navbar = ({ coins }) => {
             <a
               href="#"
               key={item}
-              className="block px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-blue-500 transition-colors duration-200"
+              className="block text-center px-4 py-3 text-gray-500 hover:bg-gray-100 hover:text-blue-500 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               {item}

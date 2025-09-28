@@ -68,14 +68,14 @@ function App() {
   return (
     <>
       <Navbar coins={coins} />
-      <div className="pt-[120px] ">
+      <div className="pt-[90px] ">
         <Coin setCoins={setCoins}></Coin>
-        <div className="available w-5/6 mx-auto flex justify-between mt-15">
-          <h3 className="text-3xl font-bold"> {tabText} </h3>
+        <div className="available w-5/6 mx-auto flex flex-col md:flex-row items-center space-y-4 md:justify-between mt-15">
+          <h3 className="text-xl md:text-3xl font-bold"> {tabText} </h3>
           <div className="select">
             <button
               onClick={() => handleTabChange("available")}
-              className={`rounded-r-none rounded-lg border-gray-300 border-2 hover:bg-lime-300 focus:border-transparent focus:ring-0   ${
+              className={`rounded-r-none rounded-lg  border-gray-300 border-2 hover:bg-lime-300 focus:border-transparent focus:ring-0   ${
                 activeTab === "available"
                   ? "bg-lime-300 text-gray-800"
                   : "bg-white"
@@ -95,7 +95,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="flex profile-container w-5/6 mx-auto mt-20 mb-30 pb-80">
+        <div className="flex profile-container w-5/6 mx-auto mt-5 md:mt-20 mb-30 pb-80">
           {
             // playerToShow.map(player => (<SinglePlayer handleSelectedPlayer={handleSelectedPlayer} key={player.playerId} player={player}></SinglePlayer>))
 

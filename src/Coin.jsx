@@ -4,7 +4,7 @@ const Coin = ({ setCoins }) => {
   };
 
   return (
-    <div className="banner relative overflow-hidden rounded-2xl md:mx-auto lg:w-5/6 mx-auto  h-130 ]">
+    <div className="banner relative overflow-hidden rounded-2xl md:mx-auto w-9/10 md:w-5/6 mx-auto  h-90 md:h-130 ]">
       <div
         className="absolute bg-black inset-0"
         style={{ backgroundColor: "black" }}
@@ -15,7 +15,7 @@ const Coin = ({ setCoins }) => {
         >
           <div className=" flex flex-col justify-center items-center  ">
             <img
-              className="w-55 mt-15"
+              className=" w-30 md:w-55 mt-15"
               src="/assets/banner-main.png"
               alt="banner"
             />
@@ -25,7 +25,7 @@ const Coin = ({ setCoins }) => {
             <h3 className="text-lg md:text-2xl font-medium text-gray-400">
               Beyond Boundaries Beyond Limits
             </h3>
-            <div className=" mt-4 relative inline-block  p-2 md:hover:p-0 md:hover:border-0 md:hover:mt-6  transition-all border-2 border-lime-500 rounded-2xl">
+            <div className=" mt-4 md:block relative inline-block  p-1 md:p-2 md:hover:p-0 md:hover:border-0 md:hover:mt-6  transition-all md:border-2 border-lime-500 md:rounded-2xl">
               <button
                 onClick={addCoins}
                 className="btn bg-lime-300 outline-lime-300 font-extrabold rounded-lg "
