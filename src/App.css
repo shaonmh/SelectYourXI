@@ -1,34 +1,32 @@
-
-
-
-
-body{
-    font-family: 'sora',system-ui, Avenir, Helvetica, Arial, sans-serif;
+body {
+  font-family: "sora", system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-.footer h3{
-    color:#fff ;
-    margin: 20px 0;
-    font-size: 18px;
+.footer h3 {
+  color: #fff;
+  margin: 20px 0;
+  font-size: 18px;
 }
 
-.footer .news-letter-container h3{
-    color: #888;
+.footer .news-letter-container h3 {
+  color: #888;
 }
 
-.footer a, .footer p{
-    font-size: 15px;
+.footer a,
+.footer p {
+  font-size: 15px;
 }
 
-
-.profile-img{
-    width: 50px;
-    height: 50px;
+.profile-img {
+  width: 50px;
+  height: 50px;
 }
 
 .profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
+
+@import "tailwindcss";
