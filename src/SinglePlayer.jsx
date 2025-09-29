@@ -4,16 +4,17 @@ import { ToastContainer } from "react-toastify";
 
 const SinglePlayer = ({ player, handleSelectedPlayer }) => {
   return (
-    <div className="md:flex-[1_1_30%] md:min-w-[300px] profile p-1 md:p-4 rounded-2xl border-2 border-gray-200 justify-between md:justify-center items-center md:flex-col">
+    <div className="md:flex-[1_1_30%] md:min-w-[300px] profile p-1 md:p-4 rounded-2xl border-2 border-gray-200 justify-between md:justify-center items-center flex flex-col">
       <img
-        className="w-full h-30 md:h-72 object-cover rounded-2xl"
+        className="w-full h-30 md:h-72 object-cover rounded-xl "
         src={player.image}
         alt="player"
       />
       <div className=" my-2 md:my-5 md:gap-5 flex flex-col">
         <div className="pl-name flex gap-1 md:gap-5">
-          <div className="pl-country pl-1 flex gap-2 md:gap-4 ">
+          <div className="pl-country pl-1 flex gap-1 md:gap-4 ">
             <svg
+              className="h-3 w-3 mt-1 md:h-6 md:w-7"
               width="26"
               height="28"
               viewBox="0 0 26 28"
@@ -31,29 +32,29 @@ const SinglePlayer = ({ player, handleSelectedPlayer }) => {
                 fillOpacity="0.8"
               />
             </svg>
-            <h3 className="flex items-center gap-1 font-bold text-base md:text-xl ">
+            <h3 className="flex items-center gap-1 font-bold text-sm md:text-xl ">
               {" "}
-              {player.name}
+              {player.name.substring(0, 15) + ".."}
             </h3>
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <p className="flex text-xs md:text-base p-1 items-center gap-2 text-slate-500 ">
+          <p className="flex text-xs md:text-base items-center gap-2 text-slate-500 ">
             <BsFlagFill /> {player.country}
           </p>
 
-          <a className="bg-slate-100 py-1 px-2 rounded md:py-2 md:px-3 md:rounded-lg btn text-xs md:text-sm">
+          <a className="bg-slate-100 my-1 py-1 px-2 rounded md:py-2 md:px-3 md:rounded-lg btn text-xs md:text-sm">
             {player.role.substring(0, 10) + "..."}
           </a>
         </div>
         <hr className="text-slate-300" />
-        <div className="rating text-left flex-col">
+        <div className="rating text-left flex-col p-1 flex ">
           <h3 className="text-md font-bold my-3 md:flex hidden">Rating</h3>
           <div className=" flex items-center my-1 text-xs md:text-base  md:my-3 justify-between">
             <h4 className="font-semibold ">{player.battingType}</h4>
             <p className="text-right">{player.bowlingType}</p>
           </div>
-          <div className=" flex flex-col md:flex-row md:justify-between text-xs md:text-base text-center ">
+          <div className=" flex flex-col md:flex-row md:justify-between text-xs md:text-base text-center mt-auto">
             <h4 className="font-semibold my-1">
               Price: ${player.biddingPrice}
             </h4>

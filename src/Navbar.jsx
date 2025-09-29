@@ -9,7 +9,7 @@ const Navbar = ({ coins }) => {
   return (
     <div>
       <nav className=" mx-auto right-0  h-[80px]  w-full fixed left-0 mb-15 top-0 inset-x-0 z-2020 bg-white/90 backdrop-blur-md shadow-md">
-        <div className="w-5/6 mx-auto">
+        <div className=" w-9/10 md:w-5/6 mx-auto">
           <div className=" flex justify-between items-center h-[80px]">
             {/* logo */}
             <div className="logo">
@@ -45,7 +45,7 @@ const Navbar = ({ coins }) => {
 
             {/* mobile menu btn */}
             <div className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)}>
+              <button className="!p-1" onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
