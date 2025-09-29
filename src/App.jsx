@@ -140,18 +140,18 @@ function App() {
           }
         </div>
         <div className="footer p-20 flex flex-col items-center text-gray-500 relative   bg-slate-950 mx-auto  ">
-          <div className="bg-white -top-[25%] h-100 w-5/6 mx-auto px-10 rounded-3xl absolute text-center items-center p-0 ">
+          <div className="bg-white -top-[15%] md:-top-[25%] h-90 md:h-100 w-9/10 md:w-5/6 mx-auto px-5 md:px-10 rounded-4xl md:rounded-3xl absolute text-center items-center ">
             <div
-              className="news-letter-container items-center pb-30  rounded-3xl flex flex-col z-9  inset-0 bg-cover bg-center"
+              className="news-letter-container items-center pb-5 md:pb-30  rounded-3xl flex flex-col z-9  inset-0 bg-auto md:bg-cover md:bg-center"
               style={{ backgroundImage: "url('/assets/bg-shadow.png')" }}
             >
-              <h2 className="text-3xl  mt-10 font-bold">
+              <h2 className=" text-xl md:text-3xl  mt-10 font-bold">
                 Subscribe to our Newsletter
               </h2>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-md md:text-2xl font-semibold text-gray-900">
                 Get the latest updates and news right in your inbox!
               </h3>
-              <div className="sub flex items-center w-1/2 gap-3 py-5 justify-around ">
+              <div className="sub flex flex-col md:flex-row   items-center md:w-1/2 gap-3 py-5 justify-around ">
                 <input
                   type="text"
                   className="h-14 appearance-none border border-slate-300 rounded-xl w-full px-10  py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -159,7 +159,7 @@ function App() {
                 />
                 <a
                   href="#"
-                  className=" border-1 border-slate-300 bg-slate-300 px-6 py-4 font-bold rounded-xl h-14 bg-linear-65 from-pink-300 to-yellow-400"
+                  className=" border-1 w-full border-slate-300 bg-slate-300 py-3 px-4 md:px-6 md:py-4 font-bold rounded-xl md:h-14 bg-linear-65 from-pink-300 to-yellow-400"
                 >
                   Subscribe
                 </a>
@@ -170,7 +170,7 @@ function App() {
           <div className="logo my-20 pt-30 flex justify-center">
             <img src="/assets/logo-footer.png" alt="logo footer" />
           </div>
-          <div className="footer-content grid grid-cols-3 gap-20 my-30">
+          <div className="footer-content flex flex-col my-10 md:grid md:grid-cols-3 md:gap-20 md:my-30">
             <div className="about-us">
               <h3>About US</h3>
               <p>
@@ -206,7 +206,7 @@ function App() {
                 />
                 <a
                   href="#"
-                  className=" text-gray-950 leading-6 text-center  w-1/3 bg-slate-300 px-3 py-2 font-bold rounded-l-none rounded-xl h-10 bg-linear-65 from-pink-300 to-yellow-400"
+                  className=" text-gray-950 leading-6 text-center  md:w-1/3 bg-slate-300 px-3 py-2 font-bold rounded-l-none rounded-xl h-10 bg-linear-65 from-pink-300 to-yellow-400"
                 >
                   Subscribe
                 </a>
