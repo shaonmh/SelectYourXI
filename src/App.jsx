@@ -95,12 +95,12 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="flex profile-container w-5/6 mx-auto mt-5 md:mt-20 mb-30 pb-80">
+        <div className="flex profile-container w-9/10 md:w-5/6 mx-auto mt-5 md:mt-20 mb-30 pb-80">
           {
             // playerToShow.map(player => (<SinglePlayer handleSelectedPlayer={handleSelectedPlayer} key={player.playerId} player={player}></SinglePlayer>))
 
             activeTab === "available" ? (
-              <div className=" flex flex-wrap gap-4 ">
+              <div className=" grid grid-cols-2 gap-2 md:flex md:flex-wrap  md:gap-4 ">
                 {playerToShow.map((player) => (
                   <SinglePlayer
                     handleSelectedPlayer={handleSelectedPlayer}
@@ -110,7 +110,7 @@ function App() {
                 ))}
               </div>
             ) : (
-              <ul className="w-full flex flex-col gap-5 ">
+              <ul className="w-full flex flex-col gap-2 md:gap-5 ">
                 {playerToShow.map((player) => (
                   <div className="flex border border-gray-50 rounded-lg items-center justify-between p-5">
                     <div className="flex gap-4 items-center">
