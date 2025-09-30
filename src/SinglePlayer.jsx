@@ -39,12 +39,12 @@ const SinglePlayer = ({ player, handleSelectedPlayer }) => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <p className="flex text-xs md:text-base items-center gap-2 text-slate-500 ">
-            <BsFlagFill /> {player.country}
+          <p className="flex text-xs md:text-base items-center gap-1 text-slate-500 ">
+            <BsFlagFill className="w-5 pl-1" /> {player.country}
           </p>
 
-          <a className="bg-slate-100 my-1 py-1 px-2 rounded md:py-2 md:px-3 md:rounded-lg btn text-xs md:text-sm">
-            {player.role.substring(0, 10) + "..."}
+          <a className="bg-slate-100 my-1 py-1 px-2 rounded md:py-2 md:px-3 md:rounded-lg md:btn text-xs md:text-sm">
+            {player.role.substring(0, 10)}
           </a>
         </div>
         <hr className="text-slate-300" />
