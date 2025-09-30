@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 
 const SinglePlayer = ({ player, handleSelectedPlayer }) => {
   return (
-    <div className="md:flex-[1_1_30%] md:min-w-[300px] profile p-1 md:p-4 rounded-2xl border-2 border-gray-200 justify-between md:justify-center items-center flex flex-col">
+    <div className="md:flex-[1_1_30%] md:min-w-[300px] profile p-1 md:p-4 rounded-2xl border-2 border-gray-200 justify-between items-center md:items-stretch flex flex-col">
       <img
         className="w-full h-30 md:h-72 object-cover rounded-xl "
         src={player.image}
@@ -50,7 +50,7 @@ const SinglePlayer = ({ player, handleSelectedPlayer }) => {
         <hr className="text-slate-300" />
         <div className="rating text-left flex-col p-1 flex ">
           <h3 className="text-md font-bold my-3 md:flex hidden">Rating</h3>
-          <div className=" flex items-center my-1 text-xs md:text-base  md:my-3 justify-between">
+          <div className=" flex items-center my-1 text-xs md:text-base md:gap-3  md:my-3 justify-between">
             <h4 className="font-semibold ">{player.battingType}</h4>
             <p className="text-right">{player.bowlingType}</p>
           </div>
