@@ -140,9 +140,9 @@ function App() {
           }
         </div>
         <div className="footer p-20 flex flex-col items-center text-gray-500 relative   bg-slate-950 mx-auto  ">
-          <div className="bg-white -top-[15%] md:-top-[25%] h-90 md:h-100 w-9/10 md:w-5/6 mx-auto px-5 md:px-10 rounded-4xl md:rounded-3xl absolute text-center items-center ">
+          <div className="bg-white -top-[12%] md:-top-[25%] h-90 md:h-100 w-9/10 md:w-5/6 mx-auto px-5 md:px-10 rounded-4xl md:rounded-3xl absolute text-center items-center ">
             <div
-              className="news-letter-container items-center pb-5 md:pb-30  rounded-3xl flex flex-col z-9  inset-0 bg-auto md:bg-cover md:bg-center"
+              className="news-letter-container items-center pb-2 md:pb-30  rounded-3xl flex flex-col z-9  inset-0 bg-auto md:bg-cover md:bg-center"
               style={{ backgroundImage: "url('/assets/bg-shadow.png')" }}
             >
               <h2 className=" text-xl md:text-3xl  mt-10 font-bold">
@@ -151,7 +151,7 @@ function App() {
               <h3 className="text-md md:text-2xl font-semibold text-gray-900">
                 Get the latest updates and news right in your inbox!
               </h3>
-              <div className="sub flex flex-col md:flex-row   items-center md:w-1/2 gap-3 py-5 justify-around ">
+              <div className="sub flex flex-col md:flex-row   items-center md:w-1/2 gap-3 py-2 md:py-5 justify-around ">
                 <input
                   type="text"
                   className="h-14 appearance-none border border-slate-300 rounded-xl w-full px-10  py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
